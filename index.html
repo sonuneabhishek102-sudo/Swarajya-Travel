@@ -556,32 +556,26 @@ Submit Booking
 
 
 <script>
-<script>
 function bookTour(event) {
     event.preventDefault();
 
     const name = document.querySelector('input[type="text"]').value;
     const mobile = document.querySelector('input[type="tel"]').value;
-    const email = document.querySelector('input[type="email"]').value;
     const tour = document.querySelector('select').value;
     const date = document.querySelector('input[type="date"]').value;
     const people = document.querySelector('input[type="number"]').value;
-    const message = document.querySelector('textarea').value;
 
-    const text =
-        "Hello Swarajya Travels!%0A%0A" +
-        "👤 Name: " + encodeURIComponent(name) + "%0A" +
-        "📱 Mobile: " + encodeURIComponent(mobile) + "%0A" +
-        "📧 Email: " + encodeURIComponent(email) + "%0A" +
-        "🚌 Tour: " + encodeURIComponent(tour) + "%0A" +
-        "📅 Date: " + encodeURIComponent(date) + "%0A" +
-        "👥 People: " + encodeURIComponent(people) + "%0A" +
-        "📝 Message: " + encodeURIComponent(message);
+    const msg = "Hello Swarajya Travels!%0A" +
+        "Name: " + name + "%0A" +
+        "Mobile: " + mobile + "%0A" +
+        "Tour: " + tour + "%0A" +
+        "Date: " + date + "%0A" +
+        "People: " + people;
 
     window.location.href =
-        "https://wa.me/918329178635?text=" + text;
+        "https://wa.me/918329178635?text=" + encodeURIComponent(msg);
 }
-</script>
+
 </script>
 
 </body>
