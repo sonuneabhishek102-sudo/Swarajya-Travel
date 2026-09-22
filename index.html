@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Swarajya Travels</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f5f7fa;
+    color:#222;
+}
+
+header{
+    background:#0b3d91;
+    color:white;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-size:15px;
+}
+
+.hero{
+    min-height:90vh;
+    background:linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1600&q=80");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:30px;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:25px;
+}
+
+.btn{
+    display:inline-block;
+    background:#ff9800;
+    color:white;
+    padding:13px 25px;
+    border-radius:7px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+section{
+    padding:60px 8%;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.title h2{
+    font-size:32px;
+    color:#0b3d91;
+}
+
+.about{
+    text-align:center;
+    max-width:800px;
+    margin:auto;
+    line-height:1.7;
+}
+
+.tours{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 4px 15px rgba(0,0,0,0.12);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card h3{
+    color:#0b3d91;
+    margin-bottom:10px;
+}
+
+.price{
+    color:#e65100;
+    font-weight:bold;
+    margin:10px 0;
+}
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+.service{
+    background:white;
+    padding:25px;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 3px 12px rgba(0,0,0,0.1);
+}
+
+.service h3{
+    color:#0b3d91;
+    margin:10px;
+}
+
+.booking{
+    background:#eaf2ff;
+}
+
+form{
+    max-width:600px;
+    margin:auto;
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 3px 15px rgba(0,0,0,0.1);
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+
+button{
+    width:100%;
+    padding:13px;
+    background:#0b3d91;
+    color:white;
+    border:none;
+    border-radius:6px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.contact{
+    text-align:center;
+    line-height:2;
+}
+
+footer{
+    background:#0b3d91;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+@media(max-width:700px){
+
+    header{
+        flex-direction:column;
+        gap:12px;
+    }
+
+    nav a{
+        margin:0 7px;
+        font-size:13px;
+    }
+
+    .hero h1{
+        font-size:35px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+Swarajya Travels
+</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#tours">Tours</a>
+<a href="#booking">Booking</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+
+<section class="hero" id="home">
+
+<div>
+
+<h1>Explore Maharashtra & Beyond</h1>
+
+<p>Travel • Explore • Enjoy</p>
+
+<a href="#tours" class="btn">
+View Tours
+</a>
+
+</div>
+
+</section>
+
+
+<section id="about">
+
+<div class="title">
+<h2>About Swarajya Travels</h2>
+</div>
+
+<div class="about">
+
+<p>
+Swarajya Travels is a local travel agency providing
+comfortable and affordable tour packages for families,
+friends and groups.
+</p>
+
+<p>
+Our goal is to make your journey safe, enjoyable and memorable.
+</p>
+
+</div>
+
+</section>
+
+
+<section id="tours">
+
+<div class="title">
+<h2>Popular Tours</h2>
+</div>
+
+<div class="tours">
+
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1596402184320-417e7178b2cd?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+
+<h3>Mahabaleshwar</h3>
+
+<p>Beautiful hills, nature and viewpoints.</p>
+
+<div class="price">
+₹2,999 / Person
+</div>
+
+<a href="#booking" class="btn">
+Book Now
+</a>
+
+</div>
+</div>
+
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1597074866923-dc0589150358?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+
+<h3>Lonavala</h3>
+
+<p>Enjoy waterfalls, mountains and greenery.</p>
+
+<div class="price">
+₹2,499 / Person
+</div>
+
+<a href="#booking" class="btn">
+Book Now
+</a>
+
+</div>
+</div>
+
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+
+<h3>Goa</h3>
+
+<p>Beaches, fun and unforgettable moments.</p>
+
+<div class="price">
+₹5,999 / Person
+</div>
+
+<a href="#booking" class="btn">
+Book Now
+</a>
+
+</div>
+</div>
+
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+
+<h3>Mumbai</h3>
+
+<p>Explore the city of dreams.</p>
+
+<div class="price">
+₹2,999 / Person
+</div>
+
+<a href="#booking" class="btn">
+Book Now
+</a>
+
+</div>
+</div>
+
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1605640840605-14ac1855827b?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+
+<h3>Nashik</h3>
+
+<p>Temples, vineyards and beautiful places.</p>
+
+<div class="price">
+₹1,999 / Person
+</div>
+
+<a href="#booking" class="btn">
+Book Now
+</a>
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="title">
+<h2>Our Services</h2>
+</div>
+
+<div class="services">
+
+<div class="service">
+<h3>🚌 Tour Packages</h3>
+<p>Affordable travel packages.</p>
+</div>
+
+<div class="service">
+<h3>🏨 Hotel Booking</h3>
+<p>Comfortable hotel arrangements.</p>
+</div>
+
+<div class="service">
+<h3>🚕 Transport</h3>
+<p>Safe and comfortable transportation.</p>
+</div>
+
+<div class="service">
+<h3>📞 Travel Support</h3>
+<p>Support throughout your journey.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="booking" class="booking">
+
+<div class="title">
+<h2>Book Your Tour</h2>
+</div>
+
+<form onsubmit="bookTour(event)">
+
+<input
+type="text"
+placeholder="Your Name"
+required
+>
+
+<input
+type="tel"
+placeholder="Mobile Number"
+required
+>
+
+<input
+type="email"
+placeholder="Email"
+>
+
+<select required>
+
+<option value="">
+Select Tour
+</option>
+
+<option>
+Mahabaleshwar
+</option>
+
+<option>
+Lonavala
+</option>
+
+<option>
+Goa
+</option>
+
+<option>
+Mumbai
+</option>
+
+<option>
+Nashik
+</option>
+
+</select>
+
+<input
+type="date"
+required
+>
+
+<input
+type="number"
+placeholder="Number of People"
+min="1"
+required
+>
+
+<textarea
+placeholder="Message"
+rows="4">
+</textarea>
+
+<button type="submit">
+Submit Booking
+</button>
+
+</form>
+
+</section>
+
+
+<section id="contact">
+
+<div class="title">
+<h2>Contact Us</h2>
+</div>
+
+<div class="contact">
+
+<p>📍 Jalgaon, Maharashtra</p>
+
+<p>📞 +91 XXXXX XXXXX</p>
+
+<p>📧 swarajyatravels@gmail.com</p>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<p>
+© 2026 Swarajya Travels. All Rights Reserved.
+</p>
+
+</footer>
+
+
+<script>
+
+function bookTour(event){
+
+event.preventDefault();
+
+alert(
+"Thank you for choosing Swarajya Travels! Your booking request has been received."
+);
+
+}
+
+</script>
+
+</body>
+</html>
