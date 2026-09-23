@@ -7,352 +7,140 @@
 <title>Swarajya Travels</title>
 
 <style>
-    .logo {
-    font-size: clamp(30px, 6vw, 45px);
+
+/* ===== BASIC ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #f5f9ff;
+    color: #222;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: white;
+    padding: 20px 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: clamp(32px, 7vw, 50px);
+    font-weight: 900;
+    color: #0b3d91;
+    margin-bottom: 15px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #0b3d91;
     font-weight: bold;
+    padding: 8px 12px;
+}
+
+/* ===== HERO ===== */
+.hero {
+    background: linear-gradient(
+        rgba(0,0,0,0.45),
+        rgba(0,0,0,0.45)
+    ),
+    url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+
+    min-height: 400px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    padding: 30px;
+}
+
+.hero h1 {
+    font-size: clamp(30px, 6vw, 55px);
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 22px;
+}
+
+.btn {
+    display: inline-block;
+    background: #ff9800;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* ===== SECTIONS ===== */
+section {
+    padding: 50px 20px;
+}
+
+.title h2,
+section > h2 {
+    font-size: 32px;
+    color: #0b3d91;
+    margin-bottom: 25px;
+}
+
+/* ===== ABOUT ===== */
+.about {
+    max-width: 800px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* ===== TOURS ===== */
+.tour-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.tour-info {
+    padding: 20px;
+}
+
+.tour-info h3 {
+    font-size: 24px;
     color: #0b3d91;
 }
-.tour-info{
-    padding:20px;
-}
 
-.tour-info{
-    text-align:center;
-    font-size:22px;
-    margin-bottom:8px;
-    color:#0b3d91;
-}
-
-.tour-location{
-    color:#666;
-    margin-bottom:10px;
-}
-
-.tour-price{
-    font-size:20px;
-    font-weight:bold;
-    color:#e65100;
-    margin:12px 0;
-}
-
-.tour-btn{
-    display:block;
-    text-align:center;
-    background:#0b3d91;
-    color:white;
-    padding:12px;
-    border-radius:7px;
-    text-decoration:none;
-    font-weight:bold;
-    }
-    
-
-</style>
-</head>
-
-<body>
-<a href="https://wa.me/918329178635"
-target="_blank"
-style="
-position:fixed;
-right:20px;
-bottom:20px;
-background:#25D366;
-color:white;
-padding:14px 20px;
-border-radius:50px;
-text-decoration:none;
-font-weight:bold;
-box-shadow:0 4px 12px rgba(0,0,0,0.25);
-z-index:9999;
-">
-💬 Book on WhatsApp
-</a>
-<header>
-
-<div class="logo">
-Swarajya Travels
-</div>
-
-<nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#tours">Tours</a>
-<a href="#booking">Booking</a>
-<a href="#contact">Contact</a>
-</nav>
-
-</header>
-
-
-<section class="hero" id="home">
-
-<div>
-
-<h1>Explore Maharashtra & Beyond</h1>
-
-<p>Travel • Explore • Enjoy</p>
-
-<a href="#tours" class="btn">
-View Tours
-</a>
-
-</div>
-
-</section>
-
-
-<section id="about">
-
-<div class="title">
-<h2>About Swarajya Travels</h2>
-</div>
-
-<div class="about">
-
-<p>
-Swarajya Travels is a local travel agency providing
-comfortable and affordable tour packages for families,
-friends and groups.
-</p>
-
-<p>
-Our goal is to make your journey safe, enjoyable and memorable.
-</p>
-
-</div>
-
-</section>
-
-
-<section id="tours">
-    <h2>Popular Tours</h2>
-
-    <div class="tour-container">
-
-        <!-- Mahabaleshwar -->
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1596402184320-417e7178b2cd?auto=format&fit=crop&w=800&q=80">
-            <div class="tour-info">
-                <h3>🏔️ Mahabaleshwar</h3>
-                <p class="tour-location">📍 Maharashtra</p>
-                <p>Beautiful hills, nature and viewpoints.</p>
-                <div class="tour-price">₹2,999 / Person</div>
-                <a href="#booking" class="tour-btn">Book Now</a>
-            </div>
-        </div>
-
-        <!-- Lonavala -->
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1625736301452-6d7f5c4c1f9e?auto=format&fit=crop&w=800&q=80">
-            <div class="tour-info">
-                <h3>🌧️ Lonavala</h3>
-                <p class="tour-location">📍 Maharashtra</p>
-                <p>Enjoy waterfalls, mountains and greenery.</p>
-                <div class="tour-price">₹2,499 / Person</div>
-                <a href="#booking" class="tour-btn">Book Now</a>
-            </div>
-        </div>
-
-        <!-- Goa -->
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=800&q=80">
-            <div class="tour-info">
-                <h3>🏖️ Goa</h3>
-                <p class="tour-location">📍 Goa, India</p>
-                <p>Beautiful beaches, fun and unforgettable moments.</p>
-                <div class="tour-price">₹5,999 / Person</div>
-                <a href="#booking" class="tour-btn">Book Now</a>
-            </div>
-        </div>
-
-        <!-- Mumbai -->
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=800&q=80">
-            <div class="tour-info">
-                <h3>🌆 Mumbai</h3>
-                <p class="tour-location">📍 Maharashtra</p>
-                <p>Explore Marine Drive, Gateway of India and Mumbai city.</p>
-                <div class="tour-price">₹2,999 / Person</div>
-                <a href="#booking" class="tour-btn">Book Now</a>
-            </div>
-        </div>
-
-        <!-- Nashik -->
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1605640840605-14ac1855827b?auto=format&fit=crop&w=800&q=80">
-            <div class="tour-info">
-                <h3>🍇 Nashik</h3>
-                <p class="tour-location">📍 Maharashtra</p>
-                <p>Enjoy vineyards, temples and beautiful natural places.</p>
-                <div class="tour-price">₹1,999 / Person</div>
-                <a href="#booking" class="tour-btn">Book Now</a>
-            </div>
-        </div>
-
-    </div>
-    </section>
-
-<div class="title">
-<h2>Our Services</h2>
-</div>
-
-<div class="services">
-
-<div class="service">
-<h3>🚌 Tour Packages</h3>
-<p>Affordable travel packages.</p>
-</div>
-
-<div class="service">
-<h3>🏨 Hotel Booking</h3>
-<p>Comfortable hotel arrangements.</p>
-</div>
-
-<div class="service">
-<h3>🚕 Transport</h3>
-<p>Safe and comfortable transportation.</p>
-</div>
-
-<div class="service">
-<h3>📞 Travel Support</h3>
-<p>Support throughout your journey.</p>
-</div>
-
-</div>
-
-</section>
-
-
-<section id="booking" class="booking">
-
-<div class="title">
-<h2>Book Your Tour</h2>
-</div>
-
-<form onsubmit="bookTour(event)">
-
-<input
-type="text"
-placeholder="Your Name"
-required
->
-
-<input
-type="tel"
-placeholder="Mobile Number"
-required
->
-
-<input
-type="email"
-placeholder="Email"
->
-
-<select required>
-
-<option value="">
-Select Tour
-</option>
-
-<option>
-Mahabaleshwar
-</option>
-
-<option>
-Lonavala
-</option>
-
-<option>
-Goa
-</option>
-
-<option>
-Mumbai
-</option>
-
-<option>
-Nashik
-</option>
-
-</select>
-
-<input
-type="date"
-required
->
-
-<input
-type="number"
-placeholder="Number of People"
-min="1"
-required
->
-
-<textarea
-placeholder="Message"
-rows="4">
-</textarea>
-
-<button type="submit">
-Submit Booking
-</button>
-
-</form>
-
-</section>
-
-
-<section id="contact">
-
-<div class="title">
-<h2>Contact Us</h2>
-</div>
-
-<div class="contact">
-
-<p>📍 Jalgaon, Maharashtra</p>
-
-<p>📞 +91 XXXXX XXXXX</p>
-
-<p>📧 swarajyatravels@gmail.com</p>
-
-</div>
-
-</section>
-
-
-<footer>
-
-<p>
-© 2026 Swarajya Travels. All Rights Reserved.
-</p>
-
-</footer>
-
-
-<script>
-function bookTour(event) {
-    event.preventDefault();
-
-    const name = document.querySelector('input[type="text"]').value;
-    const mobile = document.querySelector('input[type="tel"]').value;
-    const tour = document.querySelector('select').value;
-    const date = document.querySelector('input[type="date"]').value;
-    const people = document.querySelector('input[type="number"]').value;
-
-    const msg = "Hello Swarajya Travels!%0A" +
-        "Name: " + name + "%0A" +
-        "Mobile: " + mobile + "%0A" +
-        "Tour: " + tour + "%0A" +
-        "Date: " + date + "%0A" +
-        "People: " + people;
-
-    window.location.href =
-        "https://wa.me/918329178635?text=" + encodeURIComponent(msg);
-}
-
-</script>
-
-</body>
-</html>
+.t
