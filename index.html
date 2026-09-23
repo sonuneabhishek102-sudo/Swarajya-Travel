@@ -1,1 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Swarajya Travels</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f5f7fa;
+    color: #222;
+}
+
+header {
+    background: #0d47a1;
+    color: white;
+    padding: 18px 20px;
+    text-align: center;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+header p {
+    margin-top: 5px;
+}
+
+.hero {
+    background: linear-gradient(135deg, #1976d2, #42a5f5);
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.hero h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background: #ff9800;
+    color: white;
+    text-decoration: none;
+    padding: 13px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    color: #0d47a1;
+    margin-bottom: 25px;
+}
+
+.tours {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    width: 280px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.card h3 {
+    color: #1976d2;
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin: 8px 0;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e65100;
+    margin: 15px 0;
+}
+
+.contact {
+    background: #e3f2fd;
+}
+
+form {
+    max-width: 450px;
+    margin: auto;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 13px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+button {
+    width: 100%;
+    padding: 13px;
+    background: #0d47a1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+footer {
+    background: #0d47a1;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🚍 Swarajya Travels</div>
+    <p>Travel • Explore • Enjoy</p>
+</header>
+
+<section class="hero">
+    <h1>Explore Maharashtra With Us</h1>
+    <p>Book your local tour easily and enjoy a comfortable journey.</p>
+    <a href="#booking" class="btn">Book Your Tour</a>
+</section>
+
+<section class="section">
+    <h2>Popular Tours</h2>
+
+    <div class="tours">
+
+        <div class="card">
+            <h3>🌊 Mahabaleshwar</h3>
+            <p>Beautiful hill station tour.</p>
+            <p>Duration: 2 Days / 1 Night</p>
+            <div class="price">₹2,999 / Person</div>
+            <a href="#booking" class="btn">Book Now</a>
+        </div>
+
+        <div class="card">
+            <h3>🏰 Pune Tour</h3>
+            <p>Explore historical places in Pune.</p>
+            <p>Duration: 1 Day</p>
+            <div class="price">₹1,499 / Person</div>
+            <a href="#booking" class="btn">Book Now</a>
+        </div>
+
+        <div class="card">
+            <h3>🛕 Nashik Tour</h3>
+            <p>Visit famous temples and places.</p>
+            <p>Duration: 1 Day</p>
+            <div class="price">₹1,299 / Person</div>
+            <a href="#booking" class="btn">Book Now</a>
+        </div>
+
+    </div>
+</section>
+
+<section class="section contact" id="booking">
+    <h2>Tour Booking</h2>
+
+    <form onsubmit="sendWhatsApp(); return false;">
+
+        <input type="text" id="name" placeholder="Your Name" required>
+
+        <input type="tel" id="phone" placeholder="Mobile Number" required>
+
+        <select id="tour" required>
+            <option value="">Select Tour</option>
+            <option>Mahabaleshwar</option>
+            <option>Pune Tour</option>
+            <option>Nashik Tour</option>
+        </select>
+
+        <input type="number" id="people" placeholder="Number of People" required>
+
+        <textarea id="message" placeholder="Your Message"></textarea>
+
+        <button type="submit">Submit Booking</button>
+
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 Swarajya Travels</p>
+    <p>Local Travel Agency & Tour Booking</p>
+</footer>
+
+<script>
+function sendWhatsApp() {
+
+    var name = document.getElementById("name").value;
+    var phone = document.getElementById("phone").value;
+    var tour = document.getElementById("tour").value;
+    var people = document.getElementById("people").value;
+    var message = document.getElementById("message").value;
+
+    var whatsappNumber = "918329178635";
+
+    var text =
+        "🚍 *Swarajya Travels Booking*%0A%0A" +
+        "Name: " + name + "%0A" +
+        "Mobile: " + phone + "%0A" +
+        "Tour: " + tour + "%0A" +
+        "People: " + people + "%0A" +
+        "Message: " + message;
+
+    window.open(
+        "https://wa.me/" + whatsappNumber + "?text=" + text,
+        "_blank"
+    );
+}
+</script>
+
+</body>
+                                                   </html>
