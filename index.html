@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+     <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -7,240 +7,352 @@
 <title>Swarajya Travels</title>
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-body {
-    background: #f5f7fa;
-    color: #222;
-}
-
-header {
-    background: #0d47a1;
-    color: white;
-    padding: 18px 20px;
-    text-align: center;
-}
-
-.logo {
-    font-size: 30px;
+    .logo {
+    font-size: clamp(30px, 6vw, 45px);
     font-weight: bold;
+    color: #0b3d91;
+}
+.tour-info{
+    padding:20px;
 }
 
-header p {
-    margin-top: 5px;
+.tour-info{
+    text-align:center;
+    font-size:22px;
+    margin-bottom:8px;
+    color:#0b3d91;
 }
 
-.hero {
-    background: linear-gradient(135deg, #1976d2, #42a5f5);
-    color: white;
-    text-align: center;
-    padding: 70px 20px;
+.tour-location{
+    color:#666;
+    margin-bottom:10px;
 }
 
-.hero h1 {
-    font-size: 38px;
-    margin-bottom: 15px;
+.tour-price{
+    font-size:20px;
+    font-weight:bold;
+    color:#e65100;
+    margin:12px 0;
 }
 
-.hero p {
-    font-size: 18px;
-    margin-bottom: 25px;
-}
+.tour-btn{
+    display:block;
+    text-align:center;
+    background:#0b3d91;
+    color:white;
+    padding:12px;
+    border-radius:7px;
+    text-decoration:none;
+    font-weight:bold;
+    }
+    
 
-.btn {
-    display: inline-block;
-    background: #ff9800;
-    color: white;
-    text-decoration: none;
-    padding: 13px 25px;
-    border-radius: 25px;
-    font-weight: bold;
-}
-
-.section {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.section h2 {
-    color: #0d47a1;
-    margin-bottom: 25px;
-}
-
-.tours {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.card {
-    background: white;
-    width: 280px;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-}
-
-.card h3 {
-    color: #1976d2;
-    margin-bottom: 10px;
-}
-
-.card p {
-    margin: 8px 0;
-}
-
-.price {
-    font-size: 20px;
-    font-weight: bold;
-    color: #e65100;
-    margin: 15px 0;
-}
-
-.contact {
-    background: #e3f2fd;
-}
-
-form {
-    max-width: 450px;
-    margin: auto;
-}
-
-input, select, textarea {
-    width: 100%;
-    padding: 13px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-}
-
-button {
-    width: 100%;
-    padding: 13px;
-    background: #0d47a1;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-footer {
-    background: #0d47a1;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 30px;
-}
 </style>
 </head>
 
 <body>
-
+<a href="https://wa.me/918329178635"
+target="_blank"
+style="
+position:fixed;
+right:20px;
+bottom:20px;
+background:#25D366;
+color:white;
+padding:14px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 4px 12px rgba(0,0,0,0.25);
+z-index:9999;
+">
+💬 Book on WhatsApp
+</a>
 <header>
-    <div class="logo">🚍 Swarajya Travels</div>
-    <p>Travel • Explore • Enjoy</p>
+
+<div class="logo">
+Swarajya Travels
+</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#tours">Tours</a>
+<a href="#booking">Booking</a>
+<a href="#contact">Contact</a>
+</nav>
+
 </header>
 
-<section class="hero">
-    <h1>Explore Maharashtra With Us</h1>
-    <p>Book your local tour easily and enjoy a comfortable journey.</p>
-    <a href="#booking" class="btn">Book Your Tour</a>
+
+<section class="hero" id="home">
+
+<div>
+
+<h1>Explore Maharashtra & Beyond</h1>
+
+<p>Travel • Explore • Enjoy</p>
+
+<a href="#tours" class="btn">
+View Tours
+</a>
+
+</div>
+
 </section>
 
-<section class="section">
+
+<section id="about">
+
+<div class="title">
+<h2>About Swarajya Travels</h2>
+</div>
+
+<div class="about">
+
+<p>
+Swarajya Travels is a local travel agency providing
+comfortable and affordable tour packages for families,
+friends and groups.
+</p>
+
+<p>
+Our goal is to make your journey safe, enjoyable and memorable.
+</p>
+
+</div>
+
+</section>
+
+
+<section id="tours">
     <h2>Popular Tours</h2>
 
-    <div class="tours">
+    <div class="tour-container">
 
+        <!-- Mahabaleshwar -->
         <div class="card">
-            <h3>🌊 Mahabaleshwar</h3>
-            <p>Beautiful hill station tour.</p>
-            <p>Duration: 2 Days / 1 Night</p>
-            <div class="price">₹2,999 / Person</div>
-            <a href="#booking" class="btn">Book Now</a>
+            <img src="https://images.unsplash.com/photo-1596402184320-417e7178b2cd?auto=format&fit=crop&w=800&q=80">
+            <div class="tour-info">
+                <h3>🏔️ Mahabaleshwar</h3>
+                <p class="tour-location">📍 Maharashtra</p>
+                <p>Beautiful hills, nature and viewpoints.</p>
+                <div class="tour-price">₹2,999 / Person</div>
+                <a href="#booking" class="tour-btn">Book Now</a>
+            </div>
         </div>
 
+        <!-- Lonavala -->
         <div class="card">
-            <h3>🏰 Pune Tour</h3>
-            <p>Explore historical places in Pune.</p>
-            <p>Duration: 1 Day</p>
-            <div class="price">₹1,499 / Person</div>
-            <a href="#booking" class="btn">Book Now</a>
+            <img src="https://images.unsplash.com/photo-1625736301452-6d7f5c4c1f9e?auto=format&fit=crop&w=800&q=80">
+            <div class="tour-info">
+                <h3>🌧️ Lonavala</h3>
+                <p class="tour-location">📍 Maharashtra</p>
+                <p>Enjoy waterfalls, mountains and greenery.</p>
+                <div class="tour-price">₹2,499 / Person</div>
+                <a href="#booking" class="tour-btn">Book Now</a>
+            </div>
         </div>
 
+        <!-- Goa -->
         <div class="card">
-            <h3>🛕 Nashik Tour</h3>
-            <p>Visit famous temples and places.</p>
-            <p>Duration: 1 Day</p>
-            <div class="price">₹1,299 / Person</div>
-            <a href="#booking" class="btn">Book Now</a>
+            <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=800&q=80">
+            <div class="tour-info">
+                <h3>🏖️ Goa</h3>
+                <p class="tour-location">📍 Goa, India</p>
+                <p>Beautiful beaches, fun and unforgettable moments.</p>
+                <div class="tour-price">₹5,999 / Person</div>
+                <a href="#booking" class="tour-btn">Book Now</a>
+            </div>
+        </div>
+
+        <!-- Mumbai -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=800&q=80">
+            <div class="tour-info">
+                <h3>🌆 Mumbai</h3>
+                <p class="tour-location">📍 Maharashtra</p>
+                <p>Explore Marine Drive, Gateway of India and Mumbai city.</p>
+                <div class="tour-price">₹2,999 / Person</div>
+                <a href="#booking" class="tour-btn">Book Now</a>
+            </div>
+        </div>
+
+        <!-- Nashik -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1605640840605-14ac1855827b?auto=format&fit=crop&w=800&q=80">
+            <div class="tour-info">
+                <h3>🍇 Nashik</h3>
+                <p class="tour-location">📍 Maharashtra</p>
+                <p>Enjoy vineyards, temples and beautiful natural places.</p>
+                <div class="tour-price">₹1,999 / Person</div>
+                <a href="#booking" class="tour-btn">Book Now</a>
+            </div>
         </div>
 
     </div>
+    </section>
+
+<div class="title">
+<h2>Our Services</h2>
+</div>
+
+<div class="services">
+
+<div class="service">
+<h3>🚌 Tour Packages</h3>
+<p>Affordable travel packages.</p>
+</div>
+
+<div class="service">
+<h3>🏨 Hotel Booking</h3>
+<p>Comfortable hotel arrangements.</p>
+</div>
+
+<div class="service">
+<h3>🚕 Transport</h3>
+<p>Safe and comfortable transportation.</p>
+</div>
+
+<div class="service">
+<h3>📞 Travel Support</h3>
+<p>Support throughout your journey.</p>
+</div>
+
+</div>
+
 </section>
 
-<section class="section contact" id="booking">
-    <h2>Tour Booking</h2>
 
-    <form onsubmit="sendWhatsApp(); return false;">
+<section id="booking" class="booking">
 
-        <input type="text" id="name" placeholder="Your Name" required>
+<div class="title">
+<h2>Book Your Tour</h2>
+</div>
 
-        <input type="tel" id="phone" placeholder="Mobile Number" required>
+<form onsubmit="bookTour(event)">
 
-        <select id="tour" required>
-            <option value="">Select Tour</option>
-            <option>Mahabaleshwar</option>
-            <option>Pune Tour</option>
-            <option>Nashik Tour</option>
-        </select>
+<input
+type="text"
+placeholder="Your Name"
+required
+>
 
-        <input type="number" id="people" placeholder="Number of People" required>
+<input
+type="tel"
+placeholder="Mobile Number"
+required
+>
 
-        <textarea id="message" placeholder="Your Message"></textarea>
+<input
+type="email"
+placeholder="Email"
+>
 
-        <button type="submit">Submit Booking</button>
+<select required>
 
-    </form>
+<option value="">
+Select Tour
+</option>
+
+<option>
+Mahabaleshwar
+</option>
+
+<option>
+Lonavala
+</option>
+
+<option>
+Goa
+</option>
+
+<option>
+Mumbai
+</option>
+
+<option>
+Nashik
+</option>
+
+</select>
+
+<input
+type="date"
+required
+>
+
+<input
+type="number"
+placeholder="Number of People"
+min="1"
+required
+>
+
+<textarea
+placeholder="Message"
+rows="4">
+</textarea>
+
+<button type="submit">
+Submit Booking
+</button>
+
+</form>
+
 </section>
+
+
+<section id="contact">
+
+<div class="title">
+<h2>Contact Us</h2>
+</div>
+
+<div class="contact">
+
+<p>📍 Jalgaon, Maharashtra</p>
+
+<p>📞 +91 XXXXX XXXXX</p>
+
+<p>📧 swarajyatravels@gmail.com</p>
+
+</div>
+
+</section>
+
 
 <footer>
-    <p>© 2026 Swarajya Travels</p>
-    <p>Local Travel Agency & Tour Booking</p>
+
+<p>
+© 2026 Swarajya Travels. All Rights Reserved.
+</p>
+
 </footer>
 
+
 <script>
-function sendWhatsApp() {
+function bookTour(event) {
+    event.preventDefault();
 
-    var name = document.getElementById("name").value;
-    var phone = document.getElementById("phone").value;
-    var tour = document.getElementById("tour").value;
-    var people = document.getElementById("people").value;
-    var message = document.getElementById("message").value;
+    const name = document.querySelector('input[type="text"]').value;
+    const mobile = document.querySelector('input[type="tel"]').value;
+    const tour = document.querySelector('select').value;
+    const date = document.querySelector('input[type="date"]').value;
+    const people = document.querySelector('input[type="number"]').value;
 
-    var whatsappNumber = "918329178635";
-
-    var text =
-        "🚍 *Swarajya Travels Booking*%0A%0A" +
+    const msg = "Hello Swarajya Travels!%0A" +
         "Name: " + name + "%0A" +
-        "Mobile: " + phone + "%0A" +
+        "Mobile: " + mobile + "%0A" +
         "Tour: " + tour + "%0A" +
-        "People: " + people + "%0A" +
-        "Message: " + message;
+        "Date: " + date + "%0A" +
+        "People: " + people;
 
-    window.open(
-        "https://wa.me/" + whatsappNumber + "?text=" + text,
-        "_blank"
-    );
+    window.location.href =
+        "https://wa.me/918329178635?text=" + encodeURIComponent(msg);
 }
+
 </script>
 
 </body>
-                                                   </html>
+    </html>                                              </html>
